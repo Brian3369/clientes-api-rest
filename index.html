@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de la API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Documentación de la API REST</h1>
+        <p class="text-muted text-center">API para la gestión de clientes</p>
+
+        <div class="accordion" id="apiDocumentation">
+            <!-- Endpoint: Crear Cliente -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCreateClient">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCreateClient" aria-expanded="true" aria-controls="collapseCreateClient">
+                        POST /api-rest/create_client.php
+                    </button>
+                </h2>
+                <div id="collapseCreateClient" class="accordion-collapse collapse show" aria-labelledby="headingCreateClient" data-bs-parent="#apiDocumentation">
+                    <div class="accordion-body">
+                        <p>Crea un nuevo cliente.</p>
+                        <h6>Parámetros:</h6>
+                        <ul>
+                            <li><strong>name</strong> (string): Nombre del cliente.</li>
+                            <li><strong>email</strong> (string): Email del cliente.</li>
+                            <li><strong>city</strong> (string): Ciudad del cliente.</li>
+                            <li><strong>telephone</strong> (string): Teléfono del cliente.</li>
+                        </ul>
+                        <h6>Respuesta:</h6>
+                        <p>201 Cliente creado correctamente o 404 Error al crear el cliente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endpoint: Obtener todos los clientes -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGetAllClients">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGetAllClients" aria-expanded="false" aria-controls="collapseGetAllClients">
+                        GET /api-rest/get_all_client.php
+                    </button>
+                </h2>
+                <div id="collapseGetAllClients" class="accordion-collapse collapse" aria-labelledby="headingGetAllClients" data-bs-parent="#apiDocumentation">
+                    <div class="accordion-body">
+                        <p>Obtiene todos los clientes.</p>
+                        <h6>Respuesta:</h6>
+                        <p>200 Clientes encontrados correctamente o 404 Error al encontrar los clientes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endpoint: Obtener cliente por ID -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGetClientById">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGetClientById" aria-expanded="false" aria-controls="collapseGetClientById">
+                        GET /api-rest/get_client_by_id.php
+                    </button>
+                </h2>
+                <div id="collapseGetClientById" class="accordion-collapse collapse" aria-labelledby="headingGetClientById" data-bs-parent="#apiDocumentation">
+                    <div class="accordion-body">
+                        <p>Obtiene un cliente por su ID.</p>
+                        <h6>Parámetros:</h6>
+                        <ul>
+                            <li><strong>id</strong> (int): ID del cliente.</li>
+                        </ul>
+                        <h6>Respuesta:</h6>
+                        <p>200 Cliente encontrado correctamente o 404 Error al encontrar el cliente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endpoint: Actualizar cliente -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingUpdateClient">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUpdateClient" aria-expanded="false" aria-controls="collapseUpdateClient">
+                        PUT /api-rest/update_client.php
+                    </button>
+                </h2>
+                <div id="collapseUpdateClient" class="accordion-collapse collapse" aria-labelledby="headingUpdateClient" data-bs-parent="#apiDocumentation">
+                    <div class="accordion-body">
+                        <p>Actualiza un cliente existente.</p>
+                        <h6>Parámetros:</h6>
+                        <ul>
+                            <li><strong>id</strong> (int): ID del cliente.</li>
+                            <li><strong>name</strong> (string): Nombre del cliente.</li>
+                            <li><strong>email</strong> (string): Email del cliente.</li>
+                            <li><strong>city</strong> (string): Ciudad del cliente.</li>
+                            <li><strong>telephone</strong> (string): Teléfono del cliente.</li>
+                        </ul>
+                        <h6>Respuesta:</h6>
+                        <p>201 Cliente modificado correctamente o 404 Error al modificar el cliente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endpoint: Eliminar cliente -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingDeleteClient">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDeleteClient" aria-expanded="false" aria-controls="collapseDeleteClient">
+                        DELETE /api-rest/delete_client.php
+                    </button>
+                </h2>
+                <div id="collapseDeleteClient" class="accordion-collapse collapse" aria-labelledby="headingDeleteClient" data-bs-parent="#apiDocumentation">
+                    <div class="accordion-body">
+                        <p>Elimina un cliente por su ID.</p>
+                        <h6>Parámetros:</h6>
+                        <ul>
+                            <li><strong>id</strong> (int): ID del cliente.</li>
+                        </ul>
+                        <h6>Respuesta:</h6>
+                        <p>201 Cliente eliminado correctamente o 404 Error al eliminar el cliente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
